@@ -1,4 +1,41 @@
 # MoviesApp
+Aplicacion web desarrollada en Angular
+
+ # Funcionalidad
+ * Mostrar listado de películas, implementando infinite scroll.
+ * Mostrar información de una película en particular.
+ * Buscar películas.
+ * Todo esto, de la API TheMovieDB.
+ 
+ # Lo que aprendí
+ * Operadores de RXJS como el Tap y Map.
+ * Cómo combinar observables.
+ * Módulos.
+ * Estructura de un proyecto real.
+ * Servicios.
+ * Cómo implementar un Slideshow.
+ * Swiper
+
+  ------------------------------------------------------------
+ # MoviesApp
+ Web application developed in Angular
+
+ # Functionality
+ * Show movie list, implementing infinite scroll.
+ * Show information about a particular movie.
+ * Search movies.
+ * All of this, from the TheMovieDB API.
+
+ # What I Learned
+ * RXJS operators like Tap and Map..
+ * How to combine observables.
+ * Modules.
+ * Structure of a real project.
+ * Services.
+ * How to implement a Slideshow.
+ * Swiper
+
+ ------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
