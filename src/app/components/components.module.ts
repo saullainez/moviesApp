@@ -4,12 +4,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, SlideshowComponent],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    SlideshowComponent
   ],
   imports: [
     CommonModule,
