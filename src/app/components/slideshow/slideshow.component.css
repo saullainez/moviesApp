@@ -1,5 +1,5 @@
 .swiper-container{
-    height: 330px;
+    height: 44vw;
     width: 100%;
 }
 
@@ -10,8 +10,63 @@
 .movie-description{
     background-color: rgba(0, 0, 0, 0.3);
     bottom: 0;
-    padding: 5px 30px;
+    padding-left: 8px;
+    padding-top: 37px;
     position: absolute;
     width: 100%;
+    height: 9vw;
+}
+
+.movie-overview{
+    padding-right: 10px;
+}
+
+.movie-title{
+    font-size: 3vw;
+    margin-bottom: 37px;
+}
+
+.movie-overview-m{
+    display: none;
+}
+
+.movie-overview{
+    display: block;
+    font-size: 29px;
+    line-height: 35px;
+}
+
+
+
+@media only screen and (max-width: 800px){
+    .swiper-container{
+        height: 56vw;
+        width: 100%;
+    }
+
+    .movie-description {
+        background-color: rgba(0, 0, 0, 0.3);
+        bottom: 0;
+        padding-left: 8px;
+        padding-top: 0px !important;
+        position: absolute;
+        width: 100%;
+        font-size: 13px;
+        height: 20vw;
+    }
+
+     .movie-title {
+        font: 400 16px/28px Roboto, "Helvetica Neue", sans-serif;
+        letter-spacing: normal;
+        margin: 0 0 4px;
+    }
+    
+    .movie-overview-m{
+        display: block;
+    }
+
+    .movie-overview{
+        display: none;
+    }
 }
 
