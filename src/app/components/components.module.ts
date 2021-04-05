@@ -5,13 +5,15 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
+import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
 
 
 @NgModule({
-  declarations: [NavbarComponent, SlideshowComponent],
+  declarations: [NavbarComponent, SlideshowComponent, PeliculasPosterGridComponent],
   exports: [
     NavbarComponent,
-    SlideshowComponent
+    SlideshowComponent,
+    PeliculasPosterGridComponent
   ],
   imports: [
     CommonModule,

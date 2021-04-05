@@ -1,7 +1,10 @@
-<p>home works!</p>
 <div class="row" *ngIf="movies.length > 0">
     <div class="col">
         <app-slideshow [movies]="movies"></app-slideshow>
     </div>
 </div>
+
+<h1 class="last-movies">Últimas películas</h1>
+
+<app-peliculas-poster-grid *ngIf="movies.length > 0" [movies]="movies"></app-peliculas-poster-grid>
 

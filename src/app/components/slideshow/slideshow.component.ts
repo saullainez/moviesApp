@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Movie } from 'src/app/interfaces/now-playing-response';
 import { Swiper } from 'swiper';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-slideshow',

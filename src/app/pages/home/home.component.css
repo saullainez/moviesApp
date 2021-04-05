@@ -1,0 +1,15 @@
+.last-movies{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 800px){
+    .last-movies{
+        margin-top: 12px;
+        text-align: center;
+        font-size: 6vw;
+        margin-bottom:10px;
+    }
+}
