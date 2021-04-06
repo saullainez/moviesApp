@@ -1,0 +1,22 @@
+.movie-detail-title{
+    font-size: 3rem;
+}
+
+.movie-detail-overview{
+    font-size: 1.25rem;
+    line-height: normal;
+}
+
+.backButton{
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 900px){
+    .movie-detail-title{
+        font-size: 2rem;
+    }
+
+    .movie-detail-overview{
+        font-size: 1rem;
+    }
+}
