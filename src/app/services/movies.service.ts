@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Movie, NowPlayingResponse } from '../interfaces/now-playing-response';
 import { map, tap } from 'rxjs/operators';
+import { MovieResponse } from '../interfaces/movie-response';
 
 @Injectable({
   providedIn: 'root'
@@ -46,5 +47,9 @@ export class MoviesService {
 
   resertCarteleraPage(){
     this.carteleraPage = 1;
+  }
+
+  getMovieDetails(id: string){
+    return this.http.get<MovieResponse>(`${this.baseUrl}/movie/${id}`, {params: this.params})
   }
 }
