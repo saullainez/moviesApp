@@ -36,4 +36,11 @@ export class MoviesService {
       })
     )
   }
+
+  searchMovie(text:string): Observable<Movie[]>{
+    const params = {...this.params, page:'1', query: text};
+    return this.http.get<NowPlayingResponse>(`${this.baseUrl}/search/movie`, {
+      params
+    }).pipe(map(resp => resp.results))
+  }
 }

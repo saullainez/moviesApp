@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ export class NavbarComponent implements OnInit {
 
   showSeacrhInput = false;
   textSearch = "Buscar película";
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -18,7 +19,11 @@ export class NavbarComponent implements OnInit {
     if(fromSearchIcon){
       this.showSeacrhInput = !this.showSeacrhInput;
     }else{
-      console.log(this.textSearch);
+      this.textSearch = this.textSearch.trim();
+      if(this.textSearch.length == 0){
+        return;
+      }
+      this.router.navigate(['/search', this.textSearch]);
     }
   }
 
