@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
 import { RatingModule } from 'ng-starrating';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { RatingModule } from 'ng-starrating';
     MaterialModule,
     FormsModule,
     RouterModule,
-    RatingModule
+    RatingModule, 
+    PipesModule
   ]
 })
 export class ComponentsModule { }
