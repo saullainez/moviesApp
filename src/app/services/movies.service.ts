@@ -43,4 +43,8 @@ export class MoviesService {
       params
     }).pipe(map(resp => resp.results))
   }
+
+  resertCarteleraPage(){
+    this.carteleraPage = 1;
+  }
 }
