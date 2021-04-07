@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { combineLatest } from 'rxjs';
 import { Cast } from 'src/app/interfaces/credits-resposne';
 import { MovieResponse } from 'src/app/interfaces/movie-response';
 import { MoviesService } from 'src/app/services/movies.service';
@@ -20,13 +21,14 @@ export class MovieComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params.id;
-    this.movieService.getMovieDetails(id).subscribe(movie => {
+    combineLatest([
+      this.movieService.getMovieDetails(id),
+      this.movieService.getCast(id)
+    ]).subscribe(([movie, cast]) => {
       if(!movie){
         this.router.navigateByUrl('/home');
       }
       this.movie = movie;
-    });
-    this.movieService.getCast(id).subscribe(cast => {
       this.cast = cast.filter(actor => actor.profile_path != null);
     })
   }
