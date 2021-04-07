@@ -13,7 +13,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class MovieComponent implements OnInit {
 
   movie: MovieResponse;
-  cast: Cast[];
+  cast: Cast[] = [];
 
   constructor(private activatedRoute: ActivatedRoute, private movieService: MoviesService,
               private location: Location, private router: Router) { }
@@ -27,7 +27,7 @@ export class MovieComponent implements OnInit {
       this.movie = movie;
     });
     this.movieService.getCast(id).subscribe(cast => {
-      this.cast = cast;
+      this.cast = cast.filter(actor => actor.profile_path != null);
     })
   }
 
