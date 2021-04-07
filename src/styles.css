@@ -54,9 +54,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .text-white{
-    color: white;
+    color: white !important;
 }
 
 .text-center{
     text-align: center;
+}
+
+.mat-toolbar {
+    background: #14161e;
+    color: white !important;
 }

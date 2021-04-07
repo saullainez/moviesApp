@@ -1,5 +1,5 @@
 <mat-toolbar>
-    <a routerLink="/home">Películas</a>
+    <a class="title-toolbar text-white" routerLink="/home">Películas</a>
     <span class="example-spacer"></span>
     <mat-form-field *ngIf="showSeacrhInput" class="example-form-field">
         <input (click)="onClickSearchInput()" (keyup.enter)="onSearch(false)" matInput type="search" [(ngModel)]="textSearch">
